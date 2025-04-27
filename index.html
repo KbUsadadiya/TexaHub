@@ -1,19 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TexaHub - PDF Merge & Crop</title>
+    <title>PDF Crop & Merge</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>TexaHub - Quick PDF Label Crop</h1>
-        <input type="file" id="file-upload" multiple accept="application/pdf">
-        <button onclick="mergeAndCrop()">Merge & Crop PDFs</button>
-        <canvas id="pdf-canvas" style="display: none;"></canvas>
-        <a id="download-link" style="display: none;">Download Cropped PDF</a>
+        <h1>PDF Crop & Merge Tool</h1>
+        <input type="file" id="fileInput" multiple accept="application/pdf">
+        <div class="buttons">
+            <button onclick="mergePDFs()">Merge PDFs</button>
+            <button onclick="cropPDF()">Crop PDFs</button>
+        </div>
+        <a id="downloadLink" style="display:none;">Download</a>
     </div>
 
     <script src="pdf-lib.min.js"></script>
