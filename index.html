@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TexaHub - PDF Merge & Crop Tool</title>
+    <title>Quick PDF Merge & Crop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>TexaHub</h1>
-        <p>Simple PDF Merge and Crop Tool for Flipkart & Meesho Label Printing</p>
+        <h1>Quick PDF Merge & Crop Tool</h1>
+        <p>Fast PDF Merge & Crop Tool for Flipkart & Amazon Labels</p>
     </header>
 
     <main>
         <section class="upload-section">
-            <h2>Upload PDF</h2>
-            <input type="file" id="pdfUpload" accept="application/pdf" multiple>
-            <button onclick="mergeAndCrop()">Merge & Crop PDF</button>
+            <h2>Upload Your PDFs</h2>
+            <input type="file" id="fileInput" multiple accept="application/pdf">
+            <button onclick="mergeAndCrop()">Merge & Crop PDFs</button>
         </section>
 
-        <section class="output-section">
-            <h2>Download</h2>
-            <a id="downloadLink" style="display:none;">Download Merged PDF</a>
+        <section class="ad-section">
+            <div class="ad-box">Your Ad Here</div>
+        </section>
+
+        <section class="download-section">
+            <h2>Download Merged PDF</h2>
+            <a id="downloadLink" style="display:none">Download PDF</a>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 TexaHub | All Rights Reserved</p>
+        <p>TexaHub © 2025</p>
     </footer>
 
     <script src="script.js"></script>

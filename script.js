@@ -1,22 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const fileInput = document.getElementById('file-input');
-    const mergeButton = document.getElementById('merge-btn');
-    const outputDiv = document.getElementById('output');
+function mergeAndCrop() {
+    const fileInput = document.getElementById('fileInput');
+    if (fileInput.files.length === 0) {
+        alert('Please upload at least one PDF file.');
+        return;
+    }
 
-    mergeButton.addEventListener('click', function() {
-        const files = fileInput.files;
-        if (files.length === 0) {
-            alert('કૃપા કરીને ઓછામાં ઓછું એક PDF ફાઈલ પસંદ કરો.');
-            return;
-        }
-
-        outputDiv.innerHTML = '<p>પ્રોસેસ ચાલુ છે... કૃપા કરીને રાહ જુઓ.</p>';
-
-        // અહીં સાચો PDF મર્જ અને ક્રોપ લોજિક આવશે.
-        // હવે Demo તરીકે simple message બતાવું છું.
-
-        setTimeout(function() {
-            outputDiv.innerHTML = '<p><strong>તમારું PDF સફળતાપૂર્વક મર્જ અને ક્રોપ થઈ ગયું છે!</strong></p>';
-        }, 2000); // 2 સેકંડમાં ફેક મેસેજ આવે છે
-    });
-});
+    // Simulated download link (In production, you would merge PDFs server-side)
+    const downloadLink = document.getElementById('downloadLink');
+    downloadLink.style.display = 'block';
+    downloadLink.href = '#'; // Replace with actual file URL after processing
+    downloadLink.download = 'merged-cropped.pdf';
+    downloadLink.textContent = 'Click here to Download';
+    alert('Simulated Merge and Crop done. Ready for download.');
+}
