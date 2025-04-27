@@ -1,38 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quick PDF Merge & Crop</title>
+    <title>TexaHub - PDF Merge & Crop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Quick PDF Merge & Crop Tool</h1>
-        <p>Fast PDF Merge & Crop Tool for Flipkart & Amazon Labels</p>
-    </header>
+    <div class="container">
+        <h1>TexaHub - Quick PDF Label Crop</h1>
+        <input type="file" id="file-upload" multiple accept="application/pdf">
+        <button onclick="mergeAndCrop()">Merge & Crop PDFs</button>
+        <canvas id="pdf-canvas" style="display: none;"></canvas>
+        <a id="download-link" style="display: none;">Download Cropped PDF</a>
+    </div>
 
-    <main>
-        <section class="upload-section">
-            <h2>Upload Your PDFs</h2>
-            <input type="file" id="fileInput" multiple accept="application/pdf">
-            <button onclick="mergeAndCrop()">Merge & Crop PDFs</button>
-        </section>
-
-        <section class="ad-section">
-            <div class="ad-box">Your Ad Here</div>
-        </section>
-
-        <section class="download-section">
-            <h2>Download Merged PDF</h2>
-            <a id="downloadLink" style="display:none">Download PDF</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>TexaHub © 2025</p>
-    </footer>
-
+    <script src="pdf-lib.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
